@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  .cv {
+    position: relative;
+
+    img {
+      border-radius: 0.5rem;
+    }
+
+    .download {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      top: -0.75rem;
+      right: -0.75rem;
+      width: 1.5rem;
+      aspect-ratio: 1;
+      padding: 0.5rem;
+      border-radius: 50%;
+
+      color: var(--color-primary-shade);
+      background: var(--color-background);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+  }
+}
