@@ -1,0 +1,93 @@
+:host {
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6vw;
+    height: 100%;
+    overflow: hidden;
+
+    .title {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: 6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        hr {
+            width: 100%;
+            height: 0.5rem;
+            border-radius: 0.25rem;
+            background-color: var(--color-primary);
+            border: none;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+
+            svg {
+                width: 4rem;
+                cursor: pointer;
+                fill: var(--color-primary-shade);
+            }
+        }
+    }
+
+    .image-container {
+        position: relative;
+        align-self: flex-end;
+        margin: 0 -8%;
+
+        .image-bg {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: -25%;
+            width: 120%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: var(--color-primary-radial-gradient);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+
+        img {
+            margin-top: -200px;
+            margin-bottom: -10px;
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+
+    .intro {
+        h2 {
+            text-align: right;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        h3 {
+            text-align: right;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0.25rem 0;
+            color: var(--color-primary-shade);
+        }
+
+        p {
+            text-align: right;
+        }
+    }
+}

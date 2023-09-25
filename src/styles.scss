@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    font-family: 'Aptos', sans-serif;
+    color: var(--color-black);
+    background: var(--color-background);
+
+    --color-primary-shade: #395082;
+    --color-primary: #2C97DE;
+    --color-primary-radial-gradient: radial-gradient(circle, #2C97DE 0%, #227FBB 100%);
+    --color-primary-tint: #227FBB;
+    --color-black: #2B3E51;
+    --color-background: #f1f3f4;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
