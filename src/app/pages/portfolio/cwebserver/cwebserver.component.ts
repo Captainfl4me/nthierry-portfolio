@@ -13,4 +13,8 @@ export class CwebserverComponent {
   async goBack() {
     this.location.back()
   }
+
+  async open(url: string) {
+    window.open(url, "_blank")
+  }
 }
