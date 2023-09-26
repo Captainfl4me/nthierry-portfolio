@@ -10,6 +10,7 @@ import { CvComponent } from './pages/cv/cv.component';
 import { ProjectComponent } from './components/project/project.component';
 import { FlfcComponent } from './pages/portfolio/flfc/flfc.component';
 import { RoverComponent } from './pages/portfolio/rover/rover.component';
+import { CwebserverComponent } from './pages/portfolio/cwebserver/cwebserver.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RoverComponent } from './pages/portfolio/rover/rover.component';
     CvComponent,
     ProjectComponent,
     FlfcComponent,
-    RoverComponent
+    RoverComponent,
+    CwebserverComponent
   ],
   imports: [
     BrowserModule,

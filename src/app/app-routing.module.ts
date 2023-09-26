@@ -6,6 +6,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { CvComponent } from './pages/cv/cv.component';
 import { FlfcComponent } from './pages/portfolio/flfc/flfc.component';
 import { RoverComponent } from './pages/portfolio/rover/rover.component';
+import { CwebserverComponent } from './pages/portfolio/cwebserver/cwebserver.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'rover',
         component: RoverComponent
+      },
+      {
+        path: 'cwebserver',
+        component: CwebserverComponent
       }
     ]
   },
