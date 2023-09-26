@@ -1,9 +1,25 @@
 .container {
+  position: relative;
   cursor: pointer;
-  width: 20rem;
+  width: 25rem;
   border-radius: 0.5rem;
   padding: 1rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  h2 {
+    margin: 0;
+  }
+
+  small {
+    margin: 0;
+    font-style: italic;
+    color: var(--color-primary-tint);
+  }
+
+  p {
+    margin: 0;
+    margin-top: 0.25rem;
+  }
 
   .image {
     background-position: center;
@@ -11,5 +27,32 @@
     background-size: cover;
     aspect-ratio: 2;
     border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .forward-icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+
+    bottom: 1rem;
+    left: 1rem;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    padding: 0.5rem;
+    border-radius: 50%;
+
+    color: var(--color-primary-shade);
+    background: var(--color-background);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover .forward-icon {
+    opacity: 1;
+    transform: translateX(22.5rem);
   }
 }
