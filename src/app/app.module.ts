@@ -9,6 +9,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { CvComponent } from './pages/cv/cv.component';
 import { ProjectComponent } from './components/project/project.component';
 import { FlfcComponent } from './pages/portfolio/flfc/flfc.component';
+import { RoverComponent } from './pages/portfolio/rover/rover.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FlfcComponent } from './pages/portfolio/flfc/flfc.component';
     AboutComponent,
     CvComponent,
     ProjectComponent,
-    FlfcComponent
+    FlfcComponent,
+    RoverComponent
   ],
   imports: [
     BrowserModule,

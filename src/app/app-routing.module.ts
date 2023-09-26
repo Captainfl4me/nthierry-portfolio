@@ -5,6 +5,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CvComponent } from './pages/cv/cv.component';
 import { FlfcComponent } from './pages/portfolio/flfc/flfc.component';
+import { RoverComponent } from './pages/portfolio/rover/rover.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
       {
         path: 'flfc',
         component: FlfcComponent
+      },
+      {
+        path: 'rover',
+        component: RoverComponent
       }
     ]
   },

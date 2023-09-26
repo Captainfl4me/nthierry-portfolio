@@ -72,27 +72,26 @@ html, body {
         justify-content: space-between;
         align-items: center;
         gap: 2rem;
-
-        p {
-            text-align: center;
-        }
     }
 
     p {
         text-align: justify;
         font-size: 1rem;
         width: 100%;
+
+        &.align-center {
+            text-align: center;
+        }
     }
 
     .image {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40vw;
 
         img, video {
             border-radius: 0.5rem;
-            width: 100%;
+            width: 40vw;
         }
 
         small {
