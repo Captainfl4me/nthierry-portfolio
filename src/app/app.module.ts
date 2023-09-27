@@ -13,6 +13,7 @@ import { RoverComponent } from './pages/portfolio/rover/rover.component';
 import { CwebserverComponent } from './pages/portfolio/cwebserver/cwebserver.component';
 import { TurtlecoreComponent } from './pages/portfolio/turtlecore/turtlecore.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AnimateFadeScrollDirective } from './directives/animate-fade-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FlfcComponent,
     RoverComponent,
     CwebserverComponent,
-    TurtlecoreComponent
+    TurtlecoreComponent,
+    AnimateFadeScrollDirective
   ],
   imports: [
     BrowserModule,

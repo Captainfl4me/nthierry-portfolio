@@ -14,6 +14,7 @@
         align-self: flex-start;
         display: flex;
         flex-direction: column;
+        z-index: 1;
 
         h1 {
             font-size: 5.5rem;
@@ -48,6 +49,7 @@
     .image-container {
         position: relative;
         align-self: flex-end;
+        z-index: 0;
 
         .image-bg {
             position: absolute;
@@ -62,8 +64,8 @@
         }
 
         img {
-            margin: -200px -50px -10px -50px;
-            width: 35rem;
+            margin: -50px 0 -100px -50px;
+            width: 33rem;
             object-fit: cover;
         }
     }
