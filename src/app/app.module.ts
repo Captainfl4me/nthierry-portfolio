@@ -11,6 +11,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { FlfcComponent } from './pages/portfolio/flfc/flfc.component';
 import { RoverComponent } from './pages/portfolio/rover/rover.component';
 import { CwebserverComponent } from './pages/portfolio/cwebserver/cwebserver.component';
+import { TurtlecoreComponent } from './pages/portfolio/turtlecore/turtlecore.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CwebserverComponent } from './pages/portfolio/cwebserver/cwebserver.com
     ProjectComponent,
     FlfcComponent,
     RoverComponent,
-    CwebserverComponent
+    CwebserverComponent,
+    TurtlecoreComponent
   ],
   imports: [
     BrowserModule,

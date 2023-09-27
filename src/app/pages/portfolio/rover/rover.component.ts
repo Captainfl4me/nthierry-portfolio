@@ -11,6 +11,6 @@ export class RoverComponent {
   constructor(private location: Location) {}
 
   async goBack() {
-    this.location.back()
+    this.location.back();
   }
 }

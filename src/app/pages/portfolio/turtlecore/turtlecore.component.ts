@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-cwebserver',
-  templateUrl: './cwebserver.component.html',
-  styleUrls: ['./cwebserver.component.scss']
+  selector: 'app-turtlecore',
+  templateUrl: './turtlecore.component.html',
+  styleUrls: ['./turtlecore.component.scss']
 })
-export class CwebserverComponent {
+export class TurtlecoreComponent {
 
   constructor(private location: Location) {}
 

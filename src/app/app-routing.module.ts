@@ -7,6 +7,7 @@ import { CvComponent } from './pages/cv/cv.component';
 import { FlfcComponent } from './pages/portfolio/flfc/flfc.component';
 import { RoverComponent } from './pages/portfolio/rover/rover.component';
 import { CwebserverComponent } from './pages/portfolio/cwebserver/cwebserver.component';
+import { TurtlecoreComponent } from './pages/portfolio/turtlecore/turtlecore.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
       {
         path: 'cwebserver',
         component: CwebserverComponent
+      },
+      {
+        path: 'turtle-core',
+        component: TurtlecoreComponent
       }
     ]
   },
