@@ -12,6 +12,7 @@ import { FlfcComponent } from './pages/portfolio/flfc/flfc.component';
 import { RoverComponent } from './pages/portfolio/rover/rover.component';
 import { CwebserverComponent } from './pages/portfolio/cwebserver/cwebserver.component';
 import { TurtlecoreComponent } from './pages/portfolio/turtlecore/turtlecore.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TurtlecoreComponent } from './pages/portfolio/turtlecore/turtlecore.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
