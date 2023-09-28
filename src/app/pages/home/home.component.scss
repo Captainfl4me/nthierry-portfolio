@@ -17,7 +17,7 @@
         z-index: 1;
 
         h1 {
-            font-size: 5.5rem;
+            font-size: 5.5vw;
             font-weight: 700;
             margin-bottom: 1rem;
             text-align: left;
@@ -49,6 +49,8 @@
     .image-container {
         position: relative;
         align-self: flex-end;
+        height: 100%;
+        aspect-ratio: 449 / 640;
         z-index: 0;
 
         .image-bg {
@@ -63,10 +65,14 @@
             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
         }
 
-        img {
-            margin: -50px 0 -100px -50px;
-            width: 33rem;
-            object-fit: cover;
+        .image-fg {
+            margin: -0.25rem 0 0 -0.5rem;
+            width: 100%;
+            height: 102%;
+            background-image: url(../../../assets/profile_pic_transparent_compressed.png), url(../../../assets/profile_pic_transparent_compressed_low.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
     }
 
