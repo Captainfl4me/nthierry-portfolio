@@ -2,15 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 0.5rem;
-  overflow: visible;
+  overflow: visible !important;
   gap: 2rem;
+  padding: 0.5rem 1rem;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 
   .cv {
     position: relative;
+    flex: 1;
 
     img {
       border-radius: 0.5rem;
+      width: 100%;
     }
 
     .download {

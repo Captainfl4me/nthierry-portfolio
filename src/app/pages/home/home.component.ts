@@ -39,8 +39,13 @@ import { Component } from '@angular/core';
   ]
 })
 export class HomeComponent {
+    isMobile: boolean = false;
 
-  openLink(link: string) {
-    window.open(link, '_blank');
-  }
+    constructor() {
+        this.isMobile = window.innerWidth <= 768;
+    }
+
+    openLink(link: string) {
+        window.open(link, '_blank');
+    }
 }

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="title" @slideFadeFromLeft>
-        <h1>Nicolas <br />THIERRY</h1>
+        <h1>Nicolas <br *ngIf="!isMobile" />THIERRY</h1>
         <hr>
         <div class="links">
             <span (click)="openLink('https://github.com/Captainfl4me')">
@@ -11,14 +11,15 @@
             </span>
         </div>
     </div>
-    <div class="image-container"@slideFadeFromBottom>
-        <div class="image-bg"></div>
-        <div class="image-fg" alt="profil-pic"></div>
+    <div class="image-container" @slideFadeFromBottom>
+        <div class="image-bg" *ngIf="!isMobile"></div>
+        <div class="image-fg" *ngIf="!isMobile"></div>
+        <img src="../../../assets/profile_pic_fill_round.png" *ngIf="isMobile" alt="">
     </div>
     <div class="intro" @slideFadeFromRight>
         <h2>Ingénieur aérospatial</h2>
         <h3>Spécialisé dans les systèmes embarqués et logiciels</h3>
-        <p>Passionnée par l'espace et l'ingénierie, j'aime apprendre et découvrir de nouvelles choses. 
+        <p>Passionné par l'espace et l'ingénierie, j'aime apprendre et découvrir de nouvelles choses. 
             J'aime aussi travailler en équipe et j'ai l'habitude de réaliser des projets personnels et professionnels.</p>
     </div>
 </div>

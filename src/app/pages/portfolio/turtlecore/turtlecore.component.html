@@ -1,5 +1,5 @@
 <div class="project-portfolio-container">
-  <div class="title">
+  <div class="title" @fade>
     <a (click)="goBack()">Revenir aux projets</a>
     <h1>Turtle Core I</h1>
     <div (click)="open('https://github.com/Captainfl4me/TurtleCore')" class="github-icon">
@@ -7,7 +7,7 @@
       <span>Voir sur GitHub</span>
     </div>
   </div>
-  <div class="content-container">
+  <div class="content-container" @slideFadeFromBottom>
     <div class="section-vr">
       <div class="image" appAnimateFadeScroll>
         <img src="../../../../assets/portfolio/turtlecore/Logo.png" alt="">

@@ -8,12 +8,19 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1vw;
+    padding: 0 2vw;
 
     h1 {
       font-size: 2rem;
-      height: 2rem;
-      margin: 1rem 0;
+      margin: 0;
+      vertical-align: middle;
+
+        @media (max-width: 600px) {
+            font-size: 1.5rem;
+        }
+        @media (max-width: 400px) {
+            font-size: 1.1rem;
+        }
     }
 
     ul {
@@ -22,7 +29,11 @@ nav {
         padding: 0;
         margin: 0;
         gap: 1rem;
-        margin-right: 2rem;
+        margin: 1.5rem 0;
+
+        @media (max-width: 400px) {
+            margin: 0.5rem 0;
+        }
 
         li {
             cursor: pointer;

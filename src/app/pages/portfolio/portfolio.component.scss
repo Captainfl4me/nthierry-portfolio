@@ -10,3 +10,16 @@
 app-project {
   width: calc((100% - (var(--number-of-project-columns) - 1)*var(--gap)) / var(--number-of-project-columns));
 }
+
+@media (max-width: 900px) {
+  .container {
+    --number-of-project-columns: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    --number-of-project-columns: 1;
+    padding-bottom: var(--gap);
+  }
+}

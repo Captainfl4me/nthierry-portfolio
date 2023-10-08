@@ -21,6 +21,6 @@ export class AppComponent implements OnInit {
 
   // On route change event display title if route is not home
   onRouteChange(event: NavigationEnd) {
-    this.displayTitle = event.url !== '/home';
+    this.displayTitle = event.urlAfterRedirects !== '/home';
   }
 }
