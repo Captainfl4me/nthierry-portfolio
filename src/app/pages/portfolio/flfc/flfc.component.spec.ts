@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FlfcComponent } from './flfc.component';
 
@@ -8,6 +10,7 @@ describe('FlfcComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule, NoopAnimationsModule],
       declarations: [FlfcComponent]
     });
     fixture = TestBed.createComponent(FlfcComponent);

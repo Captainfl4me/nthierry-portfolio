@@ -4,17 +4,17 @@
         <hr>
         <div class="links">
             <span (click)="openLink('https://github.com/Captainfl4me')">
-                <img src="../../../assets/icons/logo-github.svg"  onload="SVGInject(this)">
+                <img src="/assets/icons/logo-github.svg"  onload="SVGInject(this)">
             </span>
             <span (click)="openLink('https://www.linkedin.com/in/nicolasthierry')">
-                <img src="../../../assets/icons/logo-linkedin.svg" onload="SVGInject(this)">
+                <img src="/assets/icons/logo-linkedin.svg" onload="SVGInject(this)">
             </span>
         </div>
     </div>
     <div class="image-container" @slideFadeFromBottom>
         <div class="image-bg" *ngIf="!isMobile"></div>
         <div class="image-fg" *ngIf="!isMobile"></div>
-        <img src="../../../assets/profile_pic_fill_round.png" *ngIf="isMobile" alt="">
+        <img src="/assets/profile_pic_fill_round.png" *ngIf="isMobile" alt="">
     </div>
     <div class="intro" @slideFadeFromRight>
         <h2>Ingénieur aérospatial</h2>

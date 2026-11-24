@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
-import { AboutComponent } from './pages/about/about.component';
 import { CvComponent } from './pages/cv/cv.component';
 import { ProjectComponent } from './components/project/project.component';
 import { FlfcComponent } from './pages/portfolio/flfc/flfc.component';
@@ -19,7 +18,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     HomeComponent,
     PortfolioComponent,
-    AboutComponent,
     CvComponent,
     ProjectComponent,
     FlfcComponent,
