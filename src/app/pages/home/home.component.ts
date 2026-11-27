@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -16,16 +16,6 @@ import { Component, HostListener } from '@angular/core';
         animate('1s ease', style({ opacity: '0', transform: 'translateX(-250px)' }))  // final
       ])
     ]),
-    trigger('slideFadeFromRight', [
-      transition(':enter', [
-        style({ opacity: '0', transform: 'translateX(250px)' }),  // initial
-        animate('1s ease', style({ opacity: '1', transform: 'translateX(0)' }))  // final
-      ]),
-      transition(':leave', [
-        style({ opacity: '1', transform: 'translateX(0)' }),  // initial
-        animate('1s ease', style({ opacity: '0', transform: 'translateX(250px)' }))  // final
-      ])
-    ]),
     trigger('slideFadeFromBottom', [
       transition(':enter', [
         style({ opacity: '0', transform: 'translateY(100%)' }),  // initial
@@ -39,20 +29,12 @@ import { Component, HostListener } from '@angular/core';
   ]
 })
 export class HomeComponent {
-    isMobile: boolean = false;
-
-    constructor() {
-        this.updateIsMobile();
-    }
-
-    @HostListener('window:resize')
-    onResize() {
-        this.updateIsMobile();
-    }
-
-    private updateIsMobile() {
-        this.isMobile = window.innerWidth <= 768;
-    }
+    // split into letters for the kinetic entrance (space -> nbsp so it doesn't collapse)
+    readonly nameLetters = 'Nicolas THIERRY'.split('').map(c => c === ' ' ? ' ' : c);
+    readonly marqueeItems = [
+        'Systèmes embarqués', 'C / C++', 'Python', 'ROS 2', 'Assembleur 6502',
+        'HTTP', 'CAO', 'Impression 3D', 'Git', 'Aérospatial'
+    ];
 
     openLink(link: string) {
         window.open(link, '_blank', 'noopener');
