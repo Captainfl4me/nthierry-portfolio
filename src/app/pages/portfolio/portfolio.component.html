@@ -1,17 +1,24 @@
-<div class="container">
-  <app-project name="Float Lift & Fly Contest - FLFC" info="2021-2022"
-    image="/assets/portfolio/FLFC/airship_low.jpg" description="Conception et réalisation d'un dirigeable fonctionnel d'une longueur de 6m. Première place 
-    et prix de l'innovation 2022." link="flfc"></app-project>
+<div class="page-container">
+  <header class="page-header" @fadeSlideDown>
+    <h1>Mes projets</h1>
+    <p>Sélection de projets personnels et académiques : systèmes embarqués, robotique et logiciel.</p>
+  </header>
 
-  <app-project name="Rover cartographe" info="2022-2023" image="/assets/portfolio/Rover/rover_3d_new.png"
-    description="Développement et réalisation d'un rover se déplaçant en autonomie dans 
-    son environnement tout en le cartographiant." link="rover"></app-project>
+  <div class="grid" @cardStagger>
+    <app-project name="Float Lift & Fly Contest - FLFC" info="2021-2022"
+      image="/assets/portfolio/FLFC/airship_low.jpg" description="Conception et réalisation d'un dirigeable fonctionnel d'une longueur de 6m. Première place
+      et prix de l'innovation 2022." link="flfc"></app-project>
 
-  <app-project name="C Webserver" info="2023" image="/assets/portfolio/cwebserver/logo.png" 
-    description="Développement d'un framework HTTP en C permettant de créer facilement des serveurs backend ou d'héberger des applications frontend." 
-    link="cwebserver"></app-project>
+    <app-project name="Rover cartographe" info="2022-2023" image="/assets/portfolio/Rover/rover_3d_new.png"
+      description="Développement et réalisation d'un rover se déplaçant en autonomie dans 
+      son environnement tout en le cartographiant." link="rover"></app-project>
 
-  <app-project name="TurtleCore" info="2023" image="/assets/portfolio/turtlecore/Logo.png"
-  description="Création, simulation et émulation d'une architecture simple de CPU 8 bits inspirée du 
-    processeur 6502 et de son langage assembleur." link="turtle-core"></app-project>
+    <app-project name="C Webserver" info="2023" image="/assets/portfolio/cwebserver/logo.png"
+      description="Développement d'un framework HTTP en C permettant de créer facilement des serveurs backend ou d'héberger des applications frontend."
+      link="cwebserver"></app-project>
+
+    <app-project name="TurtleCore" info="2023" image="/assets/portfolio/turtlecore/Logo.png"
+    description="Création, simulation et émulation d'une architecture simple de CPU 8 bits inspirée du 
+      processeur 6502 et de son langage assembleur." link="turtle-core"></app-project>
+  </div>
 </div>

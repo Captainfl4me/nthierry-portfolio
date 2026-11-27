@@ -1,9 +1,16 @@
-<div class="container" (click)="click()">
-  <div class="image" [style.background-image]="'url('+image+')'"></div>
-  <h2>{{ name }}</h2>
-  <small *ngIf="info">{{ info }}</small>
-  <p>{{ description }}</p>
-  <span class="forward-icon">
-    <img src="/assets/icons/arrow-forward-outline.svg" onload="SVGInject(this)">
-  </span>
+<div class="card" (click)="click()">
+  <div class="thumb-wrap">
+    <div class="thumb" [style.background-image]="'url('+image+')'"></div>
+  </div>
+  <div class="body">
+    <div class="meta">
+      <h2>{{ name }}</h2>
+      <span class="chip" *ngIf="info">{{ info }}</span>
+    </div>
+    <p>{{ description }}</p>
+    <span class="more">
+      Voir le projet
+      <img src="/assets/icons/arrow-forward-outline.svg" onload="SVGInject(this)">
+    </span>
+  </div>
 </div>

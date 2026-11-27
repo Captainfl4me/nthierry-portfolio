@@ -6,9 +6,24 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio de Nicolas THIERRY, ingénieur aérospatial spécialisé dans les systèmes embarqués et logiciels.">
+  <meta name="theme-color" content="#2c97de">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <script src="/assets/libs/svg-inject.min.js"></script>
+  <script>
+    // Set the theme before first paint to avoid a flash of the wrong theme
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t !== 'dark' && t !== 'light') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
 </head>
 <body>
   <app-root></app-root>
