@@ -29,8 +29,20 @@ import { Component } from '@angular/core';
   ]
 })
 export class HomeComponent {
-    // split into letters for the kinetic entrance (space -> nbsp so it doesn't collapse)
-    readonly nameLetters = 'Nicolas THIERRY'.split('').map(c => c === ' ' ? ' ' : c);
+    // name split into two lines ("Nicolas" / "THIERRY"), each line into letters
+    // for the kinetic entrance; offset keeps the stagger continuous across lines
+    readonly nameLines = this.buildNameLines();
+
+    private buildNameLines(): { letters: string[]; offset: number }[] {
+        let offset = 0;
+        return ['Nicolas', 'THIERRY'].map(word => {
+            const letters = word.split('');
+            const line = { letters, offset };
+            offset += letters.length;
+            return line;
+        });
+    }
+
     readonly marqueeItems = [
         'Systèmes embarqués', 'C / C++', 'Python', 'ROS 2', 'Assembleur 6502',
         'HTTP', 'CAO', 'Impression 3D', 'Git', 'Aérospatial'

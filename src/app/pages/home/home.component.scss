@@ -40,10 +40,14 @@
 
     h1 {
         margin: 0;
-        font-size: clamp(3rem, 9.5vw, 7.5rem);
+        font-size: clamp(2.75rem, 8.5vw, 6.5rem);
         font-weight: 800;
-        line-height: 1.02;
+        line-height: 1.04;
         letter-spacing: -0.03em;
+
+        .line {
+            display: block; // name and surname always on separate lines
+        }
 
         .letter {
             display: inline-block;

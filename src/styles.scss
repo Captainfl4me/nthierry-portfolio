@@ -269,7 +269,7 @@ a {
   left: -12vw;
   top: -16vw;
   background: var(--aurora-1);
-  animation: aurora-drift1 16s ease-in-out infinite alternate;
+  animation: aurora-drift1 34s ease-in-out infinite alternate;
 }
 
 .b2 {
@@ -278,7 +278,7 @@ a {
   right: -10vw;
   top: 8vh;
   background: var(--aurora-2);
-  animation: aurora-drift2 21s ease-in-out infinite alternate;
+  animation: aurora-drift2 46s ease-in-out infinite alternate;
 }
 
 .b3 {
@@ -287,7 +287,7 @@ a {
   left: 32vw;
   bottom: -18vw;
   background: var(--aurora-3);
-  animation: aurora-drift3 26s ease-in-out infinite alternate;
+  animation: aurora-drift3 58s ease-in-out infinite alternate;
 }
 
 @keyframes aurora-drift1 {
