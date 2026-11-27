@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    build: .
+    image: nthierry-portfolio:latest
+    container_name: nthierry-portfolio
+    ports:
+      # host port 8080 -> container nginx on 80
+      - "8080:80"
+    restart: unless-stopped
