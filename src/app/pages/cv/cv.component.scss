@@ -43,6 +43,7 @@
     aspect-ratio: 1;
     border-radius: 50%;
     background: var(--color-primary);
+    color: #fff; // the download icon is stroke-based (stroke="currentColor")
     box-shadow: var(--shadow-md);
     transition: all 0.18s ease;
 
