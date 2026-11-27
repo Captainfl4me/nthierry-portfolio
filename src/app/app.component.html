@@ -1,12 +1,34 @@
 <div class="page">
-  <nav>
-    <h1>{{ displayTitle ? "Nicolas THIERRY": " " }}</h1>
-    <ul>
-      <li [routerLink]="['/home']" routerLinkActive="is-active">Accueil</li>
-      <li [routerLink]="['/portfolio']" routerLinkActive="is-active">Projets</li>
-      <li [routerLink]="['/cv']" routerLinkActive="is-active">CV</li>
-    </ul>
-  </nav>
-  
-  <router-outlet></router-outlet>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" routerLink="/home">
+        <ng-container *ngIf="displayTitle">Nicolas Thierry<span class="dot">.</span></ng-container>
+      </a>
+      <nav>
+        <ul>
+          <li><a routerLink="/home" routerLinkActive="is-active">Accueil</a></li>
+          <li><a routerLink="/portfolio" routerLinkActive="is-active">Projets</a></li>
+          <li><a routerLink="/cv" routerLinkActive="is-active">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© {{ year }} Nicolas Thierry — Ingénieur aérospatial</span>
+      <div class="socials">
+        <button class="icon-btn" (click)="openLink('https://github.com/Captainfl4me')" aria-label="GitHub">
+          <img src="/assets/icons/logo-github.svg" onload="SVGInject(this)">
+        </button>
+        <button class="icon-btn" (click)="openLink('https://www.linkedin.com/in/nicolasthierry')" aria-label="LinkedIn">
+          <img src="/assets/icons/logo-linkedin.svg" onload="SVGInject(this)">
+        </button>
+      </div>
+    </div>
+  </footer>
 </div>

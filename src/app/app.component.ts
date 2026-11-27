@@ -8,8 +8,13 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   displayTitle: boolean = false;
-  
+  year: number = new Date().getFullYear();
+
   constructor(private router: Router) {}
+
+  openLink(link: string) {
+    window.open(link, '_blank', 'noopener');
+  }
 
   ngOnInit() {
     this.router.events.subscribe(event => {

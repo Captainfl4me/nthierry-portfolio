@@ -1,25 +1,27 @@
-<div class="container">
-    <div class="title" @slideFadeFromLeft>
+<div class="hero">
+    <div class="hero-text" @slideFadeFromLeft>
         <h1>Nicolas <br *ngIf="!isMobile" />THIERRY</h1>
-        <hr>
-        <div class="links">
-            <span (click)="openLink('https://github.com/Captainfl4me')">
-                <img src="/assets/icons/logo-github.svg"  onload="SVGInject(this)">
-            </span>
-            <span (click)="openLink('https://www.linkedin.com/in/nicolasthierry')">
+        <div class="accent-bar"></div>
+        <h2>Ingénieur aérospatial</h2>
+        <p class="lead">Spécialisé dans les systèmes embarqués et logiciels</p>
+        <p class="intro">Passionné par l'espace et l'ingénierie, j'aime apprendre et découvrir de nouvelles choses.
+            J'aime aussi travailler en équipe et j'ai l'habitude de réaliser des projets personnels et professionnels.</p>
+        <div class="cta-row">
+            <a class="btn" routerLink="/portfolio">Voir mes projets</a>
+            <a class="btn btn-outline" routerLink="/cv">Mon CV</a>
+        </div>
+        <div class="socials">
+            <button class="icon-btn" (click)="openLink('https://github.com/Captainfl4me')" aria-label="GitHub">
+                <img src="/assets/icons/logo-github.svg" onload="SVGInject(this)">
+            </button>
+            <button class="icon-btn" (click)="openLink('https://www.linkedin.com/in/nicolasthierry')" aria-label="LinkedIn">
                 <img src="/assets/icons/logo-linkedin.svg" onload="SVGInject(this)">
-            </span>
+            </button>
         </div>
     </div>
-    <div class="image-container" @slideFadeFromBottom>
+    <div class="hero-visual" @slideFadeFromBottom>
         <div class="image-bg" *ngIf="!isMobile"></div>
         <div class="image-fg" *ngIf="!isMobile"></div>
-        <img src="/assets/profile_pic_fill_round.png" *ngIf="isMobile" alt="">
-    </div>
-    <div class="intro" @slideFadeFromRight>
-        <h2>Ingénieur aérospatial</h2>
-        <h3>Spécialisé dans les systèmes embarqués et logiciels</h3>
-        <p>Passionné par l'espace et l'ingénierie, j'aime apprendre et découvrir de nouvelles choses. 
-            J'aime aussi travailler en équipe et j'ai l'habitude de réaliser des projets personnels et professionnels.</p>
+        <img src="/assets/profile_pic_fill_round.png" *ngIf="isMobile" alt="Nicolas Thierry">
     </div>
 </div>

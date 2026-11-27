@@ -1,14 +1,23 @@
-<div class="container" style="overflow: hidden;">
-  <div class="cv" @slideFadeFromBottom>
-    <img src="/assets/cv/CV-2023.svg" alt="">
-    <a class="download" href="/assets/cv/CV-2023_FR_THIERRY_Nicolas.pdf">
-      <img src="/assets/icons/cloud-download-outline.svg"  onload="SVGInject(this)">
-    </a>
-  </div>
-  <div class="cv" @slideFadeFromBottom>
-    <img src="/assets/cv/CV-English-2023.svg" alt="">
-    <a class="download" href="/assets/cv/CV-2023_EN_THIERRY_Nicolas.pdf">
-      <img src="/assets/icons/cloud-download-outline.svg"  onload="SVGInject(this)">
-    </a>
+<div class="page-container">
+  <header class="page-header">
+    <h1>Curriculum Vitae</h1>
+    <p>Téléchargez mon CV au format PDF, en français ou en anglais.</p>
+  </header>
+
+  <div class="cv-grid">
+    <div class="cv card" @slideFadeFromBottom>
+      <span class="chip lang">Français</span>
+      <img src="/assets/cv/CV-2023.svg" alt="CV en français">
+      <a class="download" href="/assets/cv/CV-2023_FR_THIERRY_Nicolas.pdf" aria-label="Télécharger le CV en français">
+        <img src="/assets/icons/cloud-download-outline.svg" onload="SVGInject(this)">
+      </a>
+    </div>
+    <div class="cv card" @slideFadeFromBottom>
+      <span class="chip lang">English</span>
+      <img src="/assets/cv/CV-English-2023.svg" alt="CV en anglais">
+      <a class="download" href="/assets/cv/CV-2023_EN_THIERRY_Nicolas.pdf" aria-label="Télécharger le CV en anglais">
+        <img src="/assets/icons/cloud-download-outline.svg" onload="SVGInject(this)">
+      </a>
+    </div>
   </div>
 </div>
