@@ -14,6 +14,21 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Docker
+
+A multi-stage `Dockerfile` builds the production bundle and serves it with nginx (SPA fallback included):
+
+```sh
+docker build -t nthierry-portfolio .
+docker run --rm -p 8080:80 nthierry-portfolio   # http://localhost:8080
+```
+
+Or with compose (e.g. on a homelab):
+
+```sh
+docker compose up -d --build                    # http://<host>:8080
+```
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).

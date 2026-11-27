@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -29,11 +29,11 @@ import { Component } from '@angular/core';
     trigger('slideFadeFromBottom', [
       transition(':enter', [
         style({ opacity: '0', transform: 'translateY(100%)' }),  // initial
-        animate('1s ease', style({ opacity: '1', transform: 'translateX(0)' }))  // final
+        animate('1s ease', style({ opacity: '1', transform: 'translateY(0)' }))  // final
       ]),
       transition(':leave', [
-        style({ opacity: '1', transform: 'translateX(0)' }),  // initial
-        animate('1s ease', style({ opacity: '0', transform: 'translateX(100%)' }))  // final
+        style({ opacity: '1', transform: 'translateY(0)' }),  // initial
+        animate('1s ease', style({ opacity: '0', transform: 'translateY(100%)' }))  // final
       ])
     ])
   ]
@@ -42,10 +42,19 @@ export class HomeComponent {
     isMobile: boolean = false;
 
     constructor() {
+        this.updateIsMobile();
+    }
+
+    @HostListener('window:resize')
+    onResize() {
+        this.updateIsMobile();
+    }
+
+    private updateIsMobile() {
         this.isMobile = window.innerWidth <= 768;
     }
 
     openLink(link: string) {
-        window.open(link, '_blank');
+        window.open(link, '_blank', 'noopener');
     }
 }

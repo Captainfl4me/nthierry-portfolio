@@ -10,7 +10,7 @@ export class ProjectComponent {
   @Input() name: string = 'Project';
   @Input() info: string = '';
   @Input() description: string = 'Description';
-  @Input() image: string = 'https://via.placeholder.com/150';
+  @Input() image: string = '';
   @Input() link: string = '';
 
   constructor(private router: Router, private route: ActivatedRoute) { }

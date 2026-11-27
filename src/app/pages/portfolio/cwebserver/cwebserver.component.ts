@@ -16,7 +16,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
     trigger('slideFadeFromBottom', [
         transition(':enter', [
           style({ opacity: '0', transform: 'translateY(100%)' }),  // initial
-          animate('0.5s ease', style({ opacity: '1', transform: 'translateX(0)' }))  // final
+          animate('0.5s ease', style({ opacity: '1', transform: 'translateY(0)' }))  // final
         ])
       ])
   ]
@@ -25,11 +25,11 @@ export class CwebserverComponent {
 
   constructor(private location: Location) {}
 
-  async goBack() {
+  goBack() {
     this.location.back();
   }
 
-  async open(url: string) {
-    window.open(url, "_blank");
+  open(url: string) {
+    window.open(url, "_blank", "noopener");
   }
 }
